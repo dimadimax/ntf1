@@ -1,0 +1,26 @@
+{% extends 'admin/base_site.html' %}
+
+{% load static %}
+
+
+{% block branding %}
+
+    <div class="head">
+     <!--   <h1 id="name">Main Dashboard</h1>-->
+        <a style="margin-left: 0px;" href="/admin/"><strong>HOME</strong></a> 
+        <a style="margin-left: 10px;"href="/admin/handling/"><strong>CANDIDATE MANAGER</strong></a> 
+        <a style="margin-left: 15px;" href="/admin/handling/"><strong>SOURCING TOOLS</strong></a> 
+        <a target="_blank" style="margin-left: 20px;" href="http://0.0.0.0:5601/app/kibana#/discover/ff07ac80-f900-11e9-9edf-21606ee02f7e?_g=()"><strong>KIBANA</strong></a> 
+</div>
+
+{% endblock %}
+
+
+
+{% block nav-global %}
+   
+           
+    <img class="brand_img" src="{% static 'images/sample4.png'%}"  alt="logo" style="margin-left: 25px;">
+
+
+{% endblock %}

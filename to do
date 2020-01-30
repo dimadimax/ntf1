@@ -1,0 +1,104 @@
+
+
+to do urgente --> add new cv se voglio aggiungere un nuovo cv ad un candidato già esistente
+
+
+to do rivedere tutto parse
+
+parsePdf() usa popen con un processo locale, non è  deployabile sul web
+
+
+parsePdf0() usa PyPDF2 che in alcuni casi ritorna qualcosa del tipo: """
+curriculum vitae
+ 
+alberto clerici
+ 
+dati anagrafici e personali
+ 
+....
+ 
+principali tematiche
+: controllo
+ 
+di robot industriali, dinamica dei sistem
+i meccanici, elettronica
+,  
+   
+ 
+automazione e contro
+llo di veicoli, 
+sistemi ad eventi discreti, 
+modellistic
+a 
+ad 
+oggi
+ 
+pro
+ject engineer
+ 
+"""
+
+quindi divide alcune parole
+
+al momento stai usando textextract, che però mette il testo in questo modo: 
+
+ laurea magistrale in ingegneria dell’automazione 
+
+titolo di studio per la 
+quale si concorre 
+
+esperienza professionale 
+
+ da settembre 2014                    test and reliability engineer 
+
+hyster-yale materials handling s.p.a.  
+
+via confalonieri 2, masate(mi) 
+
+ mi occupo dell'attività di 
+testing con 
+l'obiettivo della 
+misurazione e valutazione delle caratteristiche costruttive dei 
+carrelli elevatori da warehouse. 
+ svolgo test e misure con lo scopo di validare il prodotto 
+secondo le normative e procedure di settore. 
+ l'attività di validazione deve seguire anche quelle che sono le 
+varie specifiche di progetto. 
+ progetto banchi prova per la verifica funzionale e struttu rale 
+dei singoli componenti 
+ gestione attiva della strumentazione e delle attrezzature 
+utilizzate per l'esecuzione dei test 
+ attività di interfacciamento e reportistica con gli uffici di 
+progettazione elettrica e meccanica per 
+lo sviluppo e 
+miglioramento dei carrelli 
+ faccio parte di uno dei core team per lo sviluppo dei progetti 
+ svolgo attività di prova presso enti certificatori terzi 
+ membro del team per lo sviluppo software del nuovo very 
+narrow aisle 
+
+da marzo a settembre 2014 
+
+tirocinio 
+
+hyster yale materials handling s.p.a.  
+
+via confalonieri 2, masate(mi) 
+
+test and  reliability engineer 
+
+sono stato inserito all'interno dell'ufficio test e prototipi dell'area di 
+progettazione e affinacato a ingegneri che si occupano dell'attività di 
+
+pagina 1 / 4  
+
+...ma almeno non spezza le parole. 
+ 
+ 
+ 
+ 
+ 
+      
+  
+ 
+ 

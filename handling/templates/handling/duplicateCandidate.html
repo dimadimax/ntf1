@@ -1,0 +1,45 @@
+<html>
+    <head>
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+         <title>Duplicate candidate</title>
+    </head>
+    <body>
+
+        <h1><strong>Duplicate candidate?</strong></h1>
+        <h2>  It seems that candidate with email address: <strong>{{ candidate_mail }}</strong> exists. 
+</h2>
+
+</body>
+
+<h3>
+        <div>
+            <strong><em>Details</em></strong>
+
+<ul><li>Nome : {{candidate_name}}</li><li>Job Title : {{candidate_jt}} </li><li> Company : {{candidate_company}}</li>
+<li> Location : {{candidate_location}}</li>
+<li> Email : {{candidate_mail}}</li></ul>
+
+        </div>
+        
+</h3>
+
+<div>
+
+<h4> Actions </h4>
+
+ <form action='add_new_cv' method='GET'>
+<button type='submit'> Add new CV </button>
+</form>
+
+<form action='upload_from_cv' method='GET'>
+<button type='submit'> Back </button>
+</form>
+
+</div>
+
+    
+
+ 
+</html>
+
