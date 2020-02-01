@@ -28,10 +28,10 @@ class mapping(DocType):
     related_to=Text()
     
     class Meta:
-        index = 'index4'
+        index = 'index5'
 
 
 def delete(docId):
     
     es=Elasticsearch()
-    return es.delete('index4','_doc',docId)
+    return es.delete('index5','_doc',docId)
