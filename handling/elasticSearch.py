@@ -4,6 +4,7 @@
 from elasticsearch_dsl.connections import connections
 from elasticsearch_dsl import DocType, Text, Date,Integer, Keyword
 from elasticsearch import Elasticsearch
+import socket
 #from . import models
 
 connections.create_connection()
@@ -35,3 +36,14 @@ def delete(docId):
     
     es=Elasticsearch()
     return es.delete('index5','_doc',docId)
+
+def portOpen(host='127.0.0.1',port=9200): 
+    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+    result = sock.connect_ex((host,port))
+    if result==0:
+        return True
+    else:
+        return False
+    sock.close()
+    
+    
